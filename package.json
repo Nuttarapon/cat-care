@@ -1,0 +1,13 @@
+{
+  "name": "cat-care",
+  "version": "1.0.0",
+  "description": "Mini Project Full-stack REST API with Node.js and Express.js",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

@@ -1,0 +1,68 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, "Noto Sans Thai", sans-serif;
+  background: #f7f3ee;
+  color: #3d342f;
+}
+header {
+  background: #8c6a55;
+  color: white;
+  padding: 42px 20px;
+}
+header > div, main { max-width: 1050px; margin: auto; }
+.eyebrow { letter-spacing: 2px; font-size: 12px; opacity: .85; }
+h1 { margin: 8px 0; font-size: 42px; }
+header p:last-child { margin-bottom: 0; }
+main { padding: 28px 20px 60px; }
+.form-card, .cat-card {
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 5px 20px rgba(60, 45, 35, .08);
+}
+.form-card { margin-bottom: 30px; }
+form { display: grid; gap: 14px; }
+label { font-weight: 700; }
+input[type="text"], input[type="number"], select {
+  width: 100%;
+  margin-top: 7px;
+  padding: 12px;
+  border: 1px solid #d9cec5;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.check { display: flex; align-items: center; gap: 8px; }
+.check input { width: 18px; height: 18px; }
+.actions { display: flex; gap: 10px; }
+button {
+  border: 0; border-radius: 10px; padding: 11px 17px;
+  cursor: pointer; font-weight: 700;
+}
+.primary { background: #8c6a55; color: white; }
+.secondary { background: #eee7e1; color: #493c34; }
+.danger { background: #f1dddd; color: #a33d3d; }
+.toolbar {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 15px; margin-bottom: 15px;
+}
+.toolbar select { width: 220px; margin: 0; }
+.cat-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+.cat-card h3 { margin-top: 0; }
+.badge {
+  display: inline-block; padding: 5px 9px; border-radius: 20px;
+  font-size: 12px; font-weight: 700; margin-bottom: 10px;
+}
+.badge.done { background: #dcefdc; color: #38723d; }
+.badge.wait { background: #f4ead4; color: #8a6726; }
+.card-actions { display: flex; gap: 8px; margin-top: 18px; }
+.hidden { display: none; }
+.empty { text-align: center; padding: 40px; color: #81756d; }
+@media (max-width: 600px) {
+  h1 { font-size: 34px; }
+  .toolbar { align-items: stretch; flex-direction: column; }
+  .toolbar select { width: 100%; }
+}

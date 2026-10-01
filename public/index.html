@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatCare 🐱</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">FULL-STACK MINI PROJECT</p>
+      <h1>🐱 CatCare</h1>
+      <p>ระบบบันทึกข้อมูลการดูแลแมว</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="form-card">
+      <h2 id="form-title">เพิ่มข้อมูลแมว</h2>
+      <form id="cat-form">
+        <input type="hidden" id="cat-id">
+
+        <label>ชื่อแมว
+          <input id="name" type="text" placeholder="เช่น โมจิ" required>
+        </label>
+
+        <label>อายุ (ปี)
+          <input id="age" type="number" min="0" step="1" placeholder="เช่น 2" required>
+        </label>
+
+        <label>อาหารที่กิน
+          <input id="food" type="text" placeholder="เช่น Royal Canin" required>
+        </label>
+
+        <label class="check">
+          <input id="fed" type="checkbox">
+          วันนี้ให้อาหารแล้ว
+        </label>
+
+        <div class="actions">
+          <button type="submit" class="primary">บันทึกข้อมูล</button>
+          <button type="button" id="cancel-btn" class="secondary hidden">ยกเลิก</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <div class="toolbar">
+        <h2>รายชื่อแมว</h2>
+        <select id="filter">
+          <option value="">ทั้งหมด</option>
+          <option value="true">ให้อาหารแล้ว</option>
+          <option value="false">ยังไม่ได้ให้อาหาร</option>
+        </select>
+      </div>
+      <div id="cat-list" class="cat-grid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
